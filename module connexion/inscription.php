@@ -97,7 +97,8 @@ if($canRegister)
     $_SESSION["login"] = $_login;
     $_SESSION["password"] = $_password;
 
-    $bdd = mysqli_connect("localhost", "root", "", "moduleconnexion");
+    $bdd = mysqli_connect("localhost", "thibaultkine", "nessias84", "thibault-kine_database"); // database sur plesk
+
     $query = "INSERT INTO `utilisateurs`(`prenom`, `nom`, `login`, `password`) VALUES ('$_name', '$_lastname', '$_login', '$_password');";
 
     $inscription = mysqli_query($bdd, $query);

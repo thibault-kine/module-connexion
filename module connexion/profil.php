@@ -81,7 +81,8 @@ if($_POST != $_SESSION)
         $_name = $_POST["name"];
         $_lastname = $_POST["lastname"];
 
-        $db = mysqli_connect("localhost", "root", "", "moduleconnexion");
+        $db = mysqli_connect("localhost", "thibaultkine", "nessias84", "thibault-kine_database"); // database sur plesk
+
         $query = "UPDATE `utilisateurs` SET `login`='$_login', `password`='$_password', `prenom`='$_name', `nom`='$_lastname' WHERE `id`='$_id'";
         $result = mysqli_query($db, $query, MYSQLI_ASSOC);
         $row = mysqli_fetch_assoc($result);

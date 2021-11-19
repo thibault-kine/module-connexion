@@ -74,7 +74,8 @@ function checkLogin(string $_login, string $_password)
 {
     if($_login != "" && $_password != "") // si les champs entrés ne sont pas vides
     {
-        $db = mysqli_connect("localhost", "root", "", "moduleconnexion");
+        $db = mysqli_connect("localhost", "thibaultkine", "nessias84", "thibault-kine_database"); // database sur plesk
+
         $query = "SELECT `login`, `password` FROM `utilisateurs` WHERE '$_login'=`login` AND '$_password'=`password`";
         $result = mysqli_query($db, $query);
 
